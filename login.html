@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>Admin Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/login.css" />
+  <script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-firestore.js"></script>
+</head>
+<body>
+
+  <div id="login_div" class="main-div">
+    <h3>Admin Login</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Login to Account</button>
+  </div>
+
+
+
+  <script src="js/config.js"></script>
+  <script src="js/login.js"></script>
+
+</body>
+</html>

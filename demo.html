@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <style>
+body {
+    padding-top: 50px;
+}
+.dropdown.dropdown-lg .dropdown-menu {
+    margin-top: -1px;
+    padding: 4px 15px;
+}
+
+.btn-group .btn {
+    border-radius: 0;
+    margin-left: -1px;
+}
+.form-horizontal .form-group {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+@media screen and (min-width: 768px) {
+    #boot-search-box {
+        width: 500px;
+        margin: 0 auto;
+    }
+    .dropdown.dropdown-lg {
+        position: static !important;
+    }
+    .dropdown.dropdown-lg .dropdown-menu {
+        min-width: 500px;
+    }
+}
+    </style>
+
+</head>
+<body>     
+
+    <div class="container">
+ 
+        <div class="row">
+
+                        <div class="col-md-12">
+
+    <div class="input-group" id="boot-search-box">
+
+        <input type="text" class="form-control" placeholder="Type a search term like: mobile phone" />
+
+        <div class="input-group-btn">
+
+            <div class="btn-group" role="group">
+
+                <div class="dropdown dropdown-lg">
+
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+
+                    <div class="dropdown-menu dropdown-menu-right" role="menu">
+
+                        <form class="form-horizontal" role="form">
+
+                          <div class="form-group">
+
+                            <label for="filter">Narrow the search:</label>
+
+                            <select class="form-control">
+
+                                <option value="catalogue" selected>Whole catalogue</option>
+
+                                <option value="modal">Modal</option>
+
+                                <option value="price">Price</option>
+
+                                <option value="popular">Most Popular</option>
+
+                            </select>
+
+                          </div>
+
+                          <div class="form-group">
+
+                            <label for="contain">Brand:</label>
+
+                            <input class="form-control" type="text" />
+
+                          </div>
+
+                          <div class="form-group">
+
+                            <label for="contain">Category:</label>
+
+                            <input class="form-control" type="text" />
+
+                          </div>
+
+
+
+                         <div class="form-group">
+
+                            <label for="password1" class="col-sm-3 control-label">Price Range:</label>
+
+                        <div class="col-sm-3">
+
+                            <input type="text" class="form-control" id="max-price" placeholder="Max"> <br /><br />
+
+                            <input type="text" class="form-control" id="min-price" placeholder="Min">
+
+                        </div>
+
+                          <br /><br /><br /><br />                        
+
+                          <button type="submit" class="btn btn-primary btn-block">Search :: <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+                <button type="button" class="btn btn-success "><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+        </div>
+
+</div>
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

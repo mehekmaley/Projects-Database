@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Synergy</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+     <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css"> 
+	<link rel="stylesheet" href="css/style.css">
+	
+  <script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-firestore.js"></script>
+    
+  </head>
+  <body>
+	  <div class="bg-top navbar-light">
+    	<div class="container">
+    		<div class="row no-gutters d-flex align-items-center align-items-stretch">
+    			<div class="col-md-4 d-flex align-items-center py-4">
+    				<a class="navbar-brand" href="index.html">FRCRCE. </a>
+    			</div>
+	    		<div class="col-lg-8 d-block">
+		    		<div class="row d-flex">
+					    <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+					    	<div class="icon d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+					    	<div class="text">
+					    		
+						    	<span id="user"></span>
+						    </div>
+					    </div>
+					    <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+					    	<div class="icon d-flex justify-content-center align-items-center"></div>
+						    
+              </div>
+              <div class="col-md topper d-flex align-items-center justify-content-end">
+                <p class="mb-0">
+                    <a href="index.html" class="btn py-2 px-3 btn-primary d-flex align-items-center justify-content-center">
+                    <span id="logout" onclick="getout()">
+                      <script>
+                        var logout = document.getElementById("logout");
+                        
+                        document.getElementById("logout").innerHTML = "Log Out";
+                        function getout() {
+                          firebase.auth().signOut();
+                          
+                         
+                        }
+                      </script>
+                    </span>
+                  </a>
+                </p>
+              </div>
+					    <div class="col-md topper d-flex align-items-center justify-content-end">
+                                <!-- <div class="btn-group">
+          
+                               <p class="mb-0"> -->
+                                <!-- <a href="upload.html" class="btn py-2 px-3 btn-primary d-flex align-items-center justify-content-center">
+                                  <span>Upload</span>
+                                </a> -->
+                                <!--<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Action
+                                  </button>
+                                  <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">View Profile</a>
+                                    <a class="dropdown-item" href="#">Sign-in with other account</a>
+                                     <a class="dropdown-item" href="#">Something else here</a> 
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Sign Out</a>
+                                  </div>
+                                </div> -->
+                              <!-- </p> -->
+                              </div>
+                            </div>
+				    </div>
+			    </div>
+		    </div>
+		  </div>
+	</div>
+	<div id="menu">
+	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container d-flex align-items-center px-4">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	      <form action="#" class="searchform order-lg-last">
+          <div class="form-group d-flex">
+            <input type="text" class="form-control pl-3" id="myInput" placeholder="Search...">
+            
+          </div>
+        </form>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav mr-auto">
+	        	<li class="nav-item"><a href="adminin.html" class="nav-link pl-0">Home</a></li>
+	        	<li class="nav-item"><a href="adv_search.html" class="nav-link">Advance Search</a></li>
+	        	<li class="nav-item"><a href="genreport.html" class="nav-link">Generate Report</a></li>
+                <li class="nav-item"><a href="upload.html" class="nav-link">Upload</a></li>
+
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	</div>
+    <!-- END nav -->
+    
+<section class="ftco-section ftco-counter img" id="section-counter"  data-stellar-background-ratio="0.5" >
+  <!-- <div class="container" id="cont"></div>
+            <table id="project-list">
+            
+                <thead>
+                    <tr>
+                        <th>ACADEMIC YEAR</th>
+                        <th>DEPARTMENT</th>
+                        <th>CLASS</th>
+                        <th>NAME</th>
+                        <th>PROJECT DOMAIN</TOTAL>
+                        <th>PROJECT TITLE</TOTAL>
+                        <th>PROJECT GUIDE</TOTAL>
+                        <th>SCORE</TOTAL>
+                    </tr>
+                </thead>
+                <tbody id="tbid">
+                    
+                </tbody>               
+                </table>
+            </div>	 -->
+            <div class="container" id="cont">
+              <ul id="title-list"></ul>
+              </div>
+    <div class="row d-md-flex align-items-center justify-content-center">
+      <div class="col-lg-12">
+        <div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="icon"><span class="flaticon-doctor"></span></div>
+              <div class="text">
+                <strong class="number" data-number="18">0</strong>
+                <span>Certified Teachers</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="icon"><span class="flaticon-doctor"></span></div>
+              <div class="text">
+                <strong class="number" data-number="401">0</strong>
+                <span>Students</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="icon"><span class="flaticon-doctor"></span></div>
+              <div class="text">
+                <strong class="number" data-number="30">0</strong>
+                <span>Courses</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="icon"><span class="flaticon-doctor"></span></div>
+              <div class="text">
+                <strong class="number" data-number="50">0</strong>
+                <span>Awards Won</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+<!-- <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_3.jpg);" data-stellar-background-ratio="0.5" >-->
+    <!-- <div class="container" id="cont">
+        <ul id="title-list"></ul>
+    </div> --> 
+    <script src="js/config.js"></script>    
+  <!-- <script src="js/adv_search.js"></script> -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+ 
+  <script src="js/main.js"></script>
+  <script src="js/adminin.js"></script>
+    
+  </body>
+</html>
